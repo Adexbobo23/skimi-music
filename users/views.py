@@ -1,15 +1,27 @@
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User  
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import CustomUserRegistrationForm
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .forms import CustomUserLoginForm
+from .forms import CustomUserLoginForm, UserRegistrationForm
 from userprofile.models import UserProfile 
+from .models import UserAccount
+
+def register_user(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+
+            # Create UserProfile for the user
+            UserProfile.objects.create(user=user)
+
+            login(request, user)
+            return redirect('login')
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'register.html', {'form': form})
 
 
 @csrf_protect

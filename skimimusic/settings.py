@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,29 +77,28 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'skimimusic.wsgi.application'
-
+AUTH_USER_MODEL = 'users.UserAccount'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'skimi',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': 3306
-        
-#     },
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dda0g4itvc3s65', 
+        'USER': 'u9dl2f75km09qq',
+        'PASSWORD': 'pffd28ea57f3e2330a119c304c00f58364b672cd8a8fac8180f55e548c8730c43',
+        'HOST': 'ec2-52-0-125-129.compute-1.amazonaws.com', 
+        'PORT': '5432',
+    }
+}  
 
 
 # Password validation

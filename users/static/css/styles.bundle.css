@@ -83,7 +83,7 @@ a,button,input {
 
 .newsletter {
     border-radius: 1rem;
-    background-color: #196eed;
+    background-color: purple;
     padding: 3rem 2rem;
     color: #fff
 }
@@ -367,12 +367,12 @@ a,button,input {
 
 .btn-light-primary {
     background-color: rgba(25,110,237,.1);
-    color: #196eed
+    color: purple
 }
 
 .btn-light-primary.active,.btn-light-primary:active,.btn-light-primary:focus,.btn-light-primary:hover {
-    border-color: #196eed;
-    color: #196eed
+    border-color: purple;
+    color: purple
 }
 
 .btn-light-secondary {
@@ -717,17 +717,17 @@ a,button,input {
     left: 0;
     display: block;
     height: .125rem;
-    background-color: #196eed;
+    background-color: purple;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out
 }
 
 .swiper-carousel {
-    --swiper-theme-color: #196eed;
+    --swiper-theme-color: purple;
     --swiper-navigation-size: 2.5rem;
     --swiper-pagination-bullet-width: 1.5rem;
     --swiper-pagination-bullet-height: 0.25rem;
-    --swiper-pagination-bullet-inactive-color: #196eed;
+    --swiper-pagination-bullet-inactive-color: purple;
     position: relative
 }
 
@@ -1173,7 +1173,7 @@ a,button,input {
 .switch input[type=checkbox]:checked+label:after {
     -webkit-transform: translate3d(1.5rem,0,0);
     transform: translate3d(1.5rem,0,0);
-    background-color: #196eed
+    background-color: purple
 }
 
 .switch input[type=checkbox]:disabled+label {
@@ -1347,7 +1347,7 @@ a,button,input {
     width: 0;
     height: .25rem;
     display: none;
-    background-color: #196eed;
+    background-color: purple;
     z-index: 1004
 }
 
@@ -1427,7 +1427,7 @@ body[data-search-results=true] #backdrop {
 
 #header .header-container {
     padding: .5rem 1.5rem;
-    background-color: #196eed;
+    background-color: purple;
     color: #fff;
     border-radius: .375rem;
     position: relative;
@@ -1451,7 +1451,7 @@ body[data-search-results=true] #backdrop {
 }
 
 #main_header .nav-link.active,#main_header .nav-link:active,#main_header .nav-link:focus,#main_header .nav-link:hover {
-    color: #196eed
+    color: purple
 }
 
 #main_header .navbar-ex {
@@ -1479,7 +1479,7 @@ body[data-search-results=true] #backdrop {
 }
 
 #header[data-header=blue] .header-container {
-    background-color: #196eed;
+    background-color: purple;
     color: #fff
 }
 
@@ -1739,7 +1739,7 @@ body[data-search-results=true] .search {
 }
 
 #sidebar .sidebar-body .navbar .nav-link.active {
-    color: #196eed;
+    color: purple;
     background: -webkit-gradient(linear,left top, right top,color-stop(0, rgba(25,110,237,.1)),to(rgba(25,110,237,0)));
     background: linear-gradient(90deg,rgba(25,110,237,.1) 0,rgba(25,110,237,0) 100%)
 }
@@ -1794,7 +1794,7 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 #sidebar[data-sidebar=blue] .sidebar-body .navbar .nav-link.active {
-    color: #196eed;
+    color: purple;
     background: -webkit-gradient(linear,left top, right top,color-stop(0, rgba(25,110,237,.1)),to(rgba(25,110,237,0)));
     background: linear-gradient(90deg,rgba(25,110,237,.1) 0,rgba(25,110,237,0) 100%)
 }
@@ -2122,15 +2122,15 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .player-progress .player-progress__slider::-webkit-slider-thumb {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__slider::-moz-range-thumb {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__slider::-ms-thumb {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__slider::-webkit-slider-thumb {
@@ -2173,15 +2173,15 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .player-progress .player-progress__bar[value]::-webkit-progress-bar {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__bar[value]::-webkit-progress-value {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__bar[value]::-moz-progress-bar {
-    background: #196eed
+    background: purple
 }
 
 .player-progress .player-progress__bar.amplitude-buffered-progress {
@@ -2214,12 +2214,12 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .player-control .btn-default:hover {
-    background-color: #196eed;
+    background-color: purple;
     color: #fff!important
 }
 
 .player-control .btn.amplitude-playing {
-    background-color: #196eed;
+    background-color: purple;
     color: #fff!important
 }
 
@@ -2236,7 +2236,7 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .player-control .btn.amplitude-repeat-on,.player-control .btn.amplitude-shuffle-on {
-    color: #196eed!important
+    color: purple!important
 }
 
 .player-info {
@@ -2420,37 +2420,37 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 #player[data-player=blue] .player-control .btn-default:hover {
-    background-color: #196eed;
+    background-color: purple;
     color: #fff!important
 }
 
 #player[data-player=blue] .player-control .btn.amplitude-playing {
-    background-color: #196eed;
+    background-color: purple;
     color: #fff!important
 }
 
 #player[data-player=blue] .player-progress .player-progress__slider::-webkit-slider-thumb {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=blue] .player-progress .player-progress__slider::-moz-range-thumb {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=blue] .player-progress .player-progress__slider::-ms-thumb {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=blue] .player-progress .player-progress__bar[value]::-webkit-progress-bar {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=blue] .player-progress .player-progress__bar[value]::-webkit-progress-value {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=blue] .player-progress .player-progress__bar[value]::-moz-progress-bar {
-    background: #196eed
+    background: purple
 }
 
 #player[data-player=orange] .player-control .btn-default:hover {
@@ -2817,7 +2817,7 @@ body[data-sidebar-toggle=true] #sidebar {
     left: 0;
     width: 50%;
     height: 100vh;
-    background-color: #196eed;
+    background-color: purple;
     opacity: .05
 }
 
@@ -2983,7 +2983,7 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .social a:focus,.social a:hover {
-    color: #196eed
+    color: purple
 }
 
 .social li:not(:first-child) {
@@ -3101,7 +3101,7 @@ body[data-sidebar-toggle=true] #sidebar {
     top: -3px;
     left: -3px;
     border-radius: 32px;
-    border: 1px solid #196eed;
+    border: 1px solid purple;
     -webkit-box-shadow: 0 1px 8px rgba(25,110,237,.5);
     box-shadow: 0 1px 8px rgba(25,110,237,.5)
 }
@@ -3115,7 +3115,7 @@ body[data-sidebar-toggle=true] #sidebar {
 }
 
 .setting__option.setting__option--blue {
-    background-color: #196eed
+    background-color: purple
 }
 
 .setting__option.setting__option--orange {
@@ -3192,7 +3192,7 @@ body[data-theme=dark] #main_header .nav-link,body[data-theme=dark] .social a {
 }
 
 body[data-theme=dark] #main_header .nav-link:hover,body[data-theme=dark] .social a:hover {
-    color: #196eed
+    color: purple
 }
 
 body[data-theme=dark] #main_footer .last-footer {

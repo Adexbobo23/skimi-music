@@ -1,11 +1,17 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import get_user_model
 
-class CustomUserRegistrationForm(forms.Form):
-    username = forms.CharField(max_length=255, required=True)
-    email = forms.EmailField(required=True)
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
-    confirm_password = forms.CharField(widget=forms.PasswordInput, required=True)
+class UserRegistrationForm(UserCreationForm):
+    email = forms.EmailField()
+    first_name = forms.CharField(max_length=30, required=True)
+    last_name = forms.CharField(max_length=30, required=True)
+    agreed_to_terms = forms.BooleanField()
+
+    class Meta:
+        model = get_user_model()
+        fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'agreed_to_terms']
 
 
 class CustomUserLoginForm(forms.Form):

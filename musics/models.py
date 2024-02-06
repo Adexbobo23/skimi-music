@@ -1,6 +1,8 @@
 from django.db import models
+from django.conf import settings
 
 class Music(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     song_name = models.CharField(max_length=255)
     artist = models.CharField(max_length=255)
     composer = models.CharField(max_length=255)
