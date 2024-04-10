@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,13 +93,20 @@ AUTH_USER_MODEL = 'users.UserAccount'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dda0g4itvc3s65', 
-        'USER': 'u9dl2f75km09qq',
-        'PASSWORD': 'pffd28ea57f3e2330a119c304c00f58364b672cd8a8fac8180f55e548c8730c43',
-        'HOST': 'ec2-52-0-125-129.compute-1.amazonaws.com', 
+        'NAME': 'd532mt1tut73if', 
+        'USER': 'u1qfd9g8gpqpk8',
+        'PASSWORD': 'p159541c91efd6cedc31688aa092db83cbc12755f5875e47f6ce0ebd2ab7b1845',
+        'HOST': 'c7gljno857ucsl.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com', 
         'PORT': '5432',
     }
-}  
+}
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dfrmpshsi',
+    'API_KEY': '717662429698743',
+    'API_SECRET': 'KMrqgwTNhlXQQarlMfTFrSS_9nk'
+}
 
 
 # Password validation
@@ -137,11 +145,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# Use Firebase Storage as the default file storage backend
+DEFAULT_FILE_STORAGE = 'storages.backends.firebase.FirebaseStorage'
+
+# Firebase Storage settings
+FIREBASE_STORAGE_BUCKET = 'skimi-3e278.appspot.com'
+FIREBASE_STORAGE_JSON_KEY_FILE = '/path/to/your/firebase/credentials.json'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -150,7 +166,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 JAZZMIN_SETTINGS = {
-    'site_header': "Skimi Social Media",
+    'site_header': "Skimi Music App",
     'site_brand': "Connecting people together...",
     # 'site_logo': "images/skimi_logo.png",
     'copyright':  "All Right Reserved 2023",
