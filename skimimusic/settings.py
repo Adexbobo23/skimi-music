@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'users',
     'userprofile',
     'allapp',
@@ -152,12 +153,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# Use Firebase Storage as the default file storage backend
-DEFAULT_FILE_STORAGE = 'storages.backends.firebase.FirebaseStorage'
-
-# Firebase Storage settings
-FIREBASE_STORAGE_BUCKET = 'skimi-3e278.appspot.com'
-FIREBASE_STORAGE_JSON_KEY_FILE = '/path/to/your/firebase/credentials.json'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
